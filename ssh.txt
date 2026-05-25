@@ -1,0 +1,48 @@
+COMANDO:
+ssh usuario@pws direccion port
+
+QUE HACE:
+Este comando sirve para conectarse de forma remota a otro equipo o servidor.
+
+DESGLOSE:
+ssh
+Es el comando que inicia la conexion remota.
+
+usuario
+Es el nombre de la cuenta con la que quieres entrar en el sistema remoto.
+
+direccion
+Es la direccion del equipo remoto. Puede ser una IP o un nombre de host.
+
+EXPLICACION COMPLETA:
+Cuando ejecutas `ssh usuario@direccion`, tu equipo intenta abrir una sesion remota
+en el sistema indicado usando el usuario especificado. Si la conexion es correcta,
+podras usar la terminal del equipo remoto como si estuvieras dentro de el.
+
+FORMA GENERAL:
+ssh [opciones] usuario@direccion
+
+EJEMPLOS:
+ssh guest@192.168.1.10
+ssh admin@server.local
+ssh root@10.0.0.5
+
+OPCIONES COMUNES:
+-p 22
+Permite indicar un puerto distinto al puerto por defecto.
+
+-i clave
+Permite usar un archivo de clave privada para autenticarte.
+
+EJEMPLOS CON OPCIONES:
+ssh -p 2222 guest@192.168.1.10
+ssh -i mi_clave.pem admin@server.local
+
+RESUMEN RAPIDO:
+Accion: conectarse a otro equipo
+Usuario: la cuenta remota que vas a usar
+Direccion: IP o nombre del servidor
+
+NOTA:
+Normalmente, despues de ejecutar el comando, el sistema pedira una contrasena o usara
+una clave si la configuracion lo permite.

@@ -1,0 +1,40 @@
+COMANDO:
+scp -u /usr/bin/ScanLan.exe /home/guest
+en tu maquina y la conectada por ssh tambien
+QUE HACE:
+Este comando copia un archivo desde una ruta de origen hacia una carpeta de destino.
+
+DESGLOSE:
+scp
+Es el comando que realiza la copia.
+
+-u
+Esta opcion suele usarse para forzar actualizacion o sobrescritura del archivo de destino,
+dependiendo del sistema o juego donde se ejecute.
+
+/usr/bin/ScanLan.exe
+Es el archivo de origen que se quiere copiar.
+
+/home/guest
+Es la carpeta de destino donde se copiara el archivo.
+
+EXPLICACION COMPLETA:
+El comando toma el archivo ScanLan.exe que esta dentro de /usr/bin/ y lo copia
+en la carpeta /home/guest.
+
+FORMA GENERAL:
+scp [opciones] origen destino
+
+EJEMPLOS:
+scp archivo.txt /home/guest
+scp -u programa.exe /bin
+scp /home/guest/test.txt /tmp
+
+RESUMEN RAPIDO:
+Origen: /usr/bin/ScanLan.exe
+Destino: /home/guest
+Accion: copiar el archivo
+
+NOTA:
+El significado exacto de -u puede cambiar segun el entorno donde estes usando este comando,
+pero en este caso se interpreta como una copia con actualizacion o sobrescritura.

@@ -1,0 +1,64 @@
+COMANDO:
+decipher
+
+QUE HACE:
+Este comando se usa para descifrar texto cifrado o datos codificados cuando tienes
+el metodo correcto para hacerlo.
+
+FORMA GENERAL:
+decipher [opciones] dato
+
+USO BASICO:
+1. Ejecuta el comando indicando el contenido cifrado.
+2. Si hace falta, agrega la opcion del metodo o clave.
+3. Revisa la salida para obtener el texto descifrado.
+
+DESGLOSE:
+decipher
+Comando principal para intentar el descifrado.
+
+[opciones]
+Parametros extra para indicar algoritmo, modo o clave segun el entorno.
+
+dato
+Texto o bloque que quieres descifrar.
+
+EJEMPLOS GENERICOS:
+decipher "QWxhZGRpbjpvcGVuIHNlc2FtZQ=="
+decipher -m base64 "U2VjcmV0"
+decipher -k clave123 "texto_cifrado"
+
+INTERPRETAR RESULTADOS:
+- Si el comando devuelve texto legible, el descifrado fue correcto.
+- Si devuelve error, revisa la clave, el metodo y el formato de entrada.
+
+ERRORES COMUNES:
+- Metodo incorrecto.
+- Clave incorrecta.
+- Dato incompleto o mal copiado.
+
+RESUMEN RAPIDO:
+Accion: descifrar informacion.
+Entrada: texto cifrado.
+Salida: texto en claro, si el metodo y la clave son correctos.
+
+NOTA:
+La sintaxis exacta puede cambiar segun la herramienta o juego donde uses decipher.
+Si quieres, te la adapto al formato exacto de Grey Hack con ejemplos reales del juego.
+
+PASO A PASO CON ESTE HASH:
+Hash: cdada2db2563f642d50ca5524a25bc8b
+
+1. Copia el hash exactamente, sin espacios ni caracteres extra.
+2. Ejecuta el comando base:
+decipher cdada2db2563f642d50ca5524a25bc8b
+3. Si el sistema pide metodo, prueba indicando MD5 (si tu version lo soporta):
+decipher -m md5 cdada2db2563f642d50ca5524a25bc8b
+4. Si pide diccionario o lista de palabras, carga una wordlist y reintenta.
+5. Revisa la salida:
+- Si devuelve una palabra o texto legible, ese seria el valor original.
+- Si no devuelve resultado, prueba otra wordlist o reglas de variacion.
+
+COMPROBACION FINAL:
+Cuando tengas un posible texto original, validalo en el contexto donde lo obtuviste
+(por ejemplo, login, clave de servicio o script) para confirmar que era correcto.

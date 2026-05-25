@@ -1,0 +1,73 @@
+COMANDO:
+nmap
+
+QUE HACE:
+Nmap se usa para escanear equipos y descubrir puertos abiertos, servicios activos
+y, en algunos casos, informacion del sistema objetivo.
+
+FORMA GENERAL:
+nmap [opciones] objetivo
+
+USO BASICO:
+1. Indica un objetivo (IP o host).
+2. Ejecuta un escaneo simple para ver puertos abiertos.
+3. Ajusta opciones para obtener mas detalle.
+
+DESGLOSE:
+nmap
+Comando principal de escaneo de red.
+
+[opciones]
+Modifican el tipo de escaneo, rango de puertos, velocidad y salida.
+
+objetivo
+IP, hostname, rango de IPs o subred.
+
+EJEMPLOS BASICOS:
+nmap 192.168.1.10
+nmap scanme.nmap.org
+nmap 192.168.1.0/24
+
+OPCIONES COMUNES:
+-p 22
+Escanea un puerto especifico.
+
+-p 1-1000
+Escanea un rango de puertos.
+
+-sV
+Intenta detectar la version de los servicios.
+
+-O
+Intenta detectar el sistema operativo.
+
+-Pn
+Salta el ping inicial y asume que el host esta activo.
+
+-A
+Escaneo agresivo (mas informacion, mas ruido).
+
+-T4
+Aumenta velocidad de escaneo.
+
+-oN resultado.txt
+Guarda la salida en formato normal en un archivo.
+
+EJEMPLOS UTILES:
+nmap -p 22,80,443 192.168.1.10
+nmap -sV -p 1-1000 192.168.1.10
+nmap -A -T4 192.168.1.10
+nmap -oN resultado.txt 192.168.1.10
+
+COMO LEER LA SALIDA:
+- open: puerto abierto y servicio accesible.
+- closed: puerto cerrado.
+- filtered: un firewall o filtro impide confirmar estado.
+
+RESUMEN RAPIDO:
+Accion: escanear puertos y servicios.
+Entrada: objetivo (IP/host/red).
+Salida: estado de puertos y posibles servicios detectados.
+
+NOTA IMPORTANTE:
+Usa nmap solo en sistemas propios o con permiso explicito.
