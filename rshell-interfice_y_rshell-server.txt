@@ -1,0 +1,60 @@
+RSHELL INTERFICE Y RSHELL SERVER
+
+1) QUE ES CADA UNO
+
+- rshell server:
+	Es el componente que escucha en un puerto y espera conexiones.
+	Su funcion principal es aceptar la sesion remota y mantener la comunicacion.
+
+- rshell interfice (interface):
+	Es la parte desde donde controlas la conexion.
+	Aqui configuras IP/host, puerto y envias comandos durante la sesion.
+
+
+2) COMO SE USAN (FLUJO BASICO)
+
+1. Inicias el rshell server en la maquina que va a recibir la conexion.
+2. Verificas IP y puerto donde esta escuchando el server.
+3. En la interfice configuras esa IP y ese puerto.
+4. Estableces la conexion.
+5. Ejecutas comandos remotos desde la interfice y recibes salida.
+6. Cierras la sesion y detienes el server cuando termines.
+
+
+3) QUE HACE CADA PARTE DURANTE LA SESION
+
+- Server:
+	Recibe la conexion, procesa entrada/salida y sostiene la sesion activa.
+
+- Interfice:
+	Envia comandos, muestra respuestas y permite administrar la sesion.
+
+
+4) PARAMETROS IMPORTANTES
+
+- IP o host correcto del server.
+- Puerto correcto (debe coincidir en ambos lados).
+- Permisos de red y firewall.
+- Estado del servicio (server levantado antes de conectar).
+
+
+5) ERRORES COMUNES Y SOLUCION RAPIDA
+
+- Error: "connection refused"
+	Causa comun: server apagado o puerto incorrecto.
+	Solucion: iniciar server y confirmar puerto.
+
+- Error: timeout
+	Causa comun: IP incorrecta o bloqueo de red/firewall.
+	Solucion: validar IP, ruta de red y reglas de firewall.
+
+- Conexion inestable
+	Causa comun: red con latencia/perdida.
+	Solucion: reintentar, revisar conectividad y mantener sesion ligera.
+
+
+6) RESUMEN CORTO
+
+- Server = escucha y mantiene la sesion.
+- Interfice = controla la sesion y envia comandos.
+- Ambos deben coincidir en IP/puerto para funcionar.
