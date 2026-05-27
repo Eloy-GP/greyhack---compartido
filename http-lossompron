@@ -1,0 +1,1 @@
+imprime el contenido del fichero /etc/paswswd en remoto y te da permisos de invitado, se necesita que exista el /usr en el fichero system y la libreria net.so 1.0.3

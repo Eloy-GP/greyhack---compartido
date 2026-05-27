@@ -1,0 +1,4 @@
+Pilla una vulnerabilidad en http para injectar nueva contraseña para registrar el user en remoto 
+Permisos obteniendo: Non root user
+Target: libhttp.so 1.0.3
+Required: Guest user logeado en el pc y root tambien
